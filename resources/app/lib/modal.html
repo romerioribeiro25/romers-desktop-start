@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        <link rel="stylesheet" href="./photon/dist/css/photon.css"> 
+        <link rel="stylesheet" href="index.css">
+    </head> 
+    
+    <body>  
+       
+        <div class="window">
+            <header class="toolbar toolbar-header">
+                <h1 class="title pull-left" style="padding-left: 5px">
+                    Janela de confirmação
+                </h1>
+
+                <div class="toolbar-actions">  
+                    <div class="btn-group pull-right"> 
+                        <button class="btn btn-default btn-modal-close">
+                            <span class="icon icon-cancel"></span>
+                        </button> 
+                    </div>
+                </div>
+            </header>
+
+            <div class="window-content">  
+                <div id="txt-modal"></div>
+            </div> 
+        </div>
+        
+
+        <!-- SCRIPTS 
+        <script type='text/javascript' src='jquery.js'></script>-->
+        <script>
+            const {remote} = require('electron');
+            window.$ = window.jQuery = require('jquery');
+            $(".btn-modal-close").click(function () { 
+                remote.getCurrentWindow().close();
+            });
+        </script>
+    </body>
+</html>
+

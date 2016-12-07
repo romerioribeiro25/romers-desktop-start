@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">  
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./photon/dist/css/photon.css">  
+        <link rel="stylesheet" href="./bootstrap/css/bootstrap.css"> 
+        <link rel="stylesheet" href="style.css">
+    </head> 
+    
+    <body>  
+       
+        <div class="window">
+            <header class="toolbar toolbar-header">
+                <h1 class="title">
+                    Romers 1.0
+                </h1>
+
+                <div class="toolbar-actions"> 
+
+                    <button id="btn-atualizar" class="btn btn-large btn-default">
+                        <i class="fa fa-refresh"></i>
+                        Atualizar
+                    </button> 
+ 
+                    <div class="btn-group pull-right">
+                        <button class="btn btn-default btn-minimizar">
+                            <i class="fa fa-minus"></i>
+                        </button>
+                        
+                        <button class="btn btn-default btn-maximizar">
+                            <i id="fa-maximizar" class="fa fa-compress"></i>
+                        </button> 
+                    </div>
+                </div>
+            </header>
+
+            <div class="window-content"> 
+                <div id="iframePainel"></div>  
+            </div> 
+            
+          </div>
+        
+        <div id="modalMachineConfirmacao" class="modal fade" data-backdrop="static" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog"> 
+
+                <div class="modal-content">
+                    <div class="modal-header"> 
+                        <h4 class="modal-title">
+                            Confirmação de email
+                        </h4>
+                    </div>
+
+                    <div class="modal-body">  
+                        <h4 class="text-center margin-bottom">
+                            O computador ainda não foi registrado! Informe o email de cadastro, 
+                            para liberar seu acesso ao painel de pedidos.
+                        </h4>
+                        
+                        <div class="input-email-confirmacao-machine clearfix">
+                            <input id="email-confirmacao-machine" name="email" class="form-control margin-bottom" placeholder="Email" type="text">          
+                        </div>
+                    </div>
+
+                    <div class="modal-footer bg-gray"> 
+                        <div class="col-sm-offset-3 col-sm-6 col-xs-12">
+                            <button id="btnModalMachineConfirmacao" type="submit" class="btn btn-primary btn-block">
+                                <i id="loadingSubmit" class="hidden fa fa-spinner fa-1x fa-spin"></i>
+                                Confirmar
+                            </button>
+                        </div>
+
+                    </div> 
+                </div><!-- /.modal-content  no-border-radius --> 
+            </div><!-- /.modal-dialog -->  
+        </div>
+        
+
+        <!-- SCRIPTS 
+        <script type='text/javascript' src='jquery.js'></script>-->
+        <script type='text/javascript' src='index.js' charset="utf-8"></script> 
+    </body>
+</html>
+
